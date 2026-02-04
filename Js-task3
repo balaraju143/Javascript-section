@@ -1,0 +1,321 @@
+
+//JS-TASK 3:
+
+//Part 1 – Logical & Ternary Operator
+
+// Q1: Check whether a number is between 10 and 50 using logical AND.
+// Input: let num = 25
+// Output: "Valid Number" or "Invalid Number"
+
+//Coding:
+let num = 25;
+if (num >= 10 && num <= 50) {
+  console.log("Valid Number");
+} else {
+  console.log("Invalid Number");
+}
+//output:Valid Number
+//Explanation:Logical AND (&&) checks both conditions. Since 25 lies between 10 and 50, output is Valid Number.
+
+
+// Q2: Check if a user is eligible to log in.
+// Condition:
+// username must be "admin"
+// password must be "1234"
+// to Use logical AND.
+
+//Coding:
+let username = "admin";
+let password = "1234";
+if (username === "admin" && password === "1234") {
+  console.log("Login successful");
+} else {
+  console.log("Access Denied");
+}
+//Explanation:If user successful to login both username and password must match. If one fails, login is denied.
+
+
+// Q3: Using ternary operator:
+// Check if a number is even or odd.
+
+// Coding:
+let number = 8;
+let result = (number % 2 === 0) ? "Even" : "Odd";
+console.log(result);
+//output:Even
+//Explanation:The % operator returns the remainder after didving one number by another.here 8 divide perfectly by 2 so it returns even.
+
+
+// Q4: What is the output?
+//Code:
+console.log((10 === "10") || (5 > 2) && !(3 < 1));
+
+// Step-by-step:
+
+// 10 === "10" → false (Here we use strict equal to means it compares value and data type)
+
+// 5 > 2 → true
+// 3 < 1 → false
+// !(false) → true
+// (true && true) → true
+// (false || true) → true
+//Final Output: true
+
+
+// Part 2 – Type Conversion
+
+// Q5: Find the output and explain:
+ console.log("5" + 2); 
+ output:"52"
+
+ console.log("5" - 2); 
+ output:3
+
+ console.log("5" * 2);
+ output:10
+
+ console.log("5" / 2);
+ output:2.5
+// Explanation:
+
+ //In JavaScript  the + operator concatenates when a string is involved
+ //But -, *, and / always convert strings into numbers and perform arithmetic operations.
+
+
+// Q6: Convert the following using explicit conversion:
+
+// Coding:
+let value=100;
+let numvalue=Number(value);
+console.log(numvalue);
+console.log(typeof(numvalue));
+
+let boolvalue=Boolean(value);
+console.log(boolvalue)
+console.log(typeof(boolvalue));
+
+// Q7: What will be the output?
+console.log(Boolean(""));
+output:false //Empty string returns false
+
+console.log(Boolean(" "));
+output:true //It contains space Character so non empty string gives true
+
+console.log(Boolean(0));
+output:false //0 is a flase value 
+
+console.log(Boolean([]));
+output:true // IT contains empty array but in js arrys are objects,all objects gives true  value
+
+
+// Part 3 – Conditional Statements
+
+// Q8: Write a program:
+// If marks >= 90 → Grade A
+// If marks >= 75 → Grade B
+// If marks >= 50 → Grade C
+// Else → Fail
+// Use if else if.
+
+// Coding:
+let marks = 60;
+if (marks >= 90) {
+  console.log("Grade A");
+} else if (marks >= 75) {
+  console.log("Grade B");
+} else if (marks >= 50) {
+  console.log("Grade C");
+} else {
+  console.log("Fail");
+}
+
+// Q9: Traffic Signal Program using switch case:
+// "red" → Stop
+// "yellow" → Ready
+// "green" → Go
+// Default → Invalid Signal
+
+// Coding:
+let signal = "default";
+switch (signal) {
+  case "red":
+    console.log("Stop");
+    break;
+  case "yellow":
+    console.log("Ready");
+    break;
+  case "green":
+    console.log("Go Go");
+    break;
+  default:
+    console.log("Invalid Signal");
+}
+
+// 
+// Coding:
+let age = 26;
+let height = 172;
+let weight = 64;
+if (age >= 18) {
+  if (height >= 160) {
+    if (weight >= 50) {
+      console.log("Selected");
+    } else {
+      console.log("Weight condition failed");
+    }
+  } else {
+    console.log("Height condition failed");
+  }
+} else {
+  console.log("Age condition failed");
+}
+
+
+//Part 4 – Loops
+
+// Q11: Print numbers from 1 to 20 using for loop.
+
+// Coding:
+for (let i = 1; i <= 20; i++) {
+  console.log(i);
+}
+
+//Q12: Print only odd numbers from 1 to 20.
+
+// Coding:
+for (let i = 1; i <= 20; i++) {
+  if (i % 2 !== 0) {
+    console.log(i);
+  }
+}
+
+// Q13: Using while loop:
+// Print numbers from 10 to 1.
+
+// Coding:
+let i = 10;
+while (i >= 1) {
+  console.log(i);
+  i--;
+}
+
+//Q14: Using do-while loop:
+//Print numbers from 1 to 5.
+
+// Coding:
+let m = 1;
+do {
+  console.log(j);
+  m++;
+} while (m <= 5);
+
+// Q15: Using for-of loop:
+// Print each character from:
+// let word = "STACKLY"
+
+//Coding:
+let word = "Amazon";
+for (let char of word) {
+  console.log(char);
+}
+
+// Q16: Using for-in loop:
+// Print both key and value from:
+// let student = {
+// name: "Arun",
+// course: "MERN",
+// duration: "6 months"
+// }
+
+//Coding:
+let student = {
+  name: "Raju",
+  course: "javascript",
+  duration: "3 months"
+};
+
+for (let key in student) {
+  console.log(key + " : " + student[key]);
+}
+
+//Real-Time Questions
+
+// RT-1: Login System
+// If username = "admin" AND password = "1234" → "Login Success"
+// Else → "Invalid Credentials"
+// Use logical operator + ternary.
+
+//Coding
+console.log(user === "admin" && pass === "1234")? "Login Success": "Invalid Credentials"
+
+// RT-2: Salary Bonus System
+// If employee salary > 50000 AND experience > 3 years
+// → Eligible for bonus
+// Else → Not eligible
+
+// Coding:
+let salary = 60000;
+let experience = 4;
+
+if (salary > 50000 && experience > 3) {
+  console.log("Eligible for bonus");
+} else {
+  console.log("Not eligible");
+}
+
+// RT-3: Shopping Discount
+// If cart amount:
+// >= 5000 → 20% discount
+// >= 2000 → 10% discount
+// < 2000 → No discount
+// Use if-else if.
+
+//Coding:
+let amount = 3500;
+
+if (amount >= 5000) {
+  console.log("20% Discount");
+} else if (amount >= 2000) {
+  console.log("10% Discount");
+} else {
+  console.log("No Discount");
+}
+
+// RT-4: Even/Odd Counter
+// Count how many even numbers between 1 to 50.
+
+// Coding:
+let count = 0;
+for (let i = 1; i <= 50; i++) {
+  if (i % 2 === 0) {
+    count++;
+  }
+}
+
+console.log(count);
+
+// RT-5: Dynamic Greeting System
+// If hour between:
+// 1–6 → Good Morning
+// 7–12 → Morning
+// 13–16 → Good Afternoon
+// 17–19 → Good Evening
+// Else → Good Night
+
+// Coding:
+let hour = 11;
+
+if (hour >= 1 && hour <= 6) {
+  console.log("Good Morning");
+} else if (hour <= 12) {
+  console.log("Morning");
+} else if (hour <= 16) {
+  console.log("Good Afternoon");
+} else if (hour <= 19) {
+  console.log("Good Evening");
+} else {
+  console.log("Good Night");
+}  
+output:Morning
+//Explanation:
+//First the hour >=1 and <=6 checked it false and next move to next condition it satisfy so it gives output as morning, once satisfy the condition other loop statements not checked.
